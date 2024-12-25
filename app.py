@@ -1,8 +1,11 @@
-import sys,os
+import sys, os
 from flask import Flask
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
-from src.logger import logging
-from src.exception import CustomException
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "src")))
+
+from logger import logging
+from exception import CustomException
+
 
 app = Flask(__name__)
 

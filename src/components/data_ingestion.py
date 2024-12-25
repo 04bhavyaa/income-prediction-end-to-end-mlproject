@@ -1,8 +1,10 @@
 import os
 import sys
+# Add the parent directory of src to sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
 from src.logger import logging
 from src.exception import CustomException
+
 import pandas as pd
 import numpy as np
 from dataclasses import dataclass
