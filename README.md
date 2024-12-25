@@ -1,7 +1,7 @@
 ## Income Prediction 
 Working on income prediction problem associated with adult income census dataset. The goal is to accurately predict whether or not a person is making more or less than $50,000 a year.
 
-# About the Dataset
+### About the Dataset
 - Age: Describes the age of individuals. Continuous.
 - Workclass: Private, Self-emp-not-inc, Self-emp-inc, Federal-gov, Local-gov, State-gov, Without-pay, Never-worked.
 - fnlwgt: Continuous.
