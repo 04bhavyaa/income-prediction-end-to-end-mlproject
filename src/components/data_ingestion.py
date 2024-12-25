@@ -26,7 +26,7 @@ class DataIngestion:
         logging.info("Data ingestion initiated")
         try:
             logging.info("Reading data from source")
-            data = pd.read_csv(os.path.join("notebook/data", "income_cleandata.csv"))
+            data = pd.read_csv(os.path.join("notebook/data", "adult-income.csv"))
             logging.info("Data loaded successfully")
 
             os.makedirs(os.path.dirname(self.ingestion_config.raw_data_path), exist_ok=True)
