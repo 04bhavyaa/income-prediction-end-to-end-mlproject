@@ -14,6 +14,13 @@ def save_object(file_path, obj):
     except Exception as e:
         raise CustomException(e, sys)
     
+def load_object(file_path):
+    try:
+        with open(file_path, 'rb') as file_obj:
+            return pickle.load(file_obj)
+    except Exception as e:
+        raise CustomException(e, sys)
+    
 def evaluate_model(X_train, y_train, X_test, y_test, models, params):
     try:
         report = {}
@@ -21,7 +28,9 @@ def evaluate_model(X_train, y_train, X_test, y_test, models, params):
             model = list(models.values())[i]
             param = params[list(models.keys())[i]]
 
-            GS = GridSearchCV(model, param, cv = 5)
+            logging.info(f"Evaluating {list(models.keys())[i]} model")
+
+            GS = GridSearchCV(model, param, cv=5, n_jobs=-1, verbose=3)
             GS.fit(X_train, y_train)
 
             model.set_params(**GS.best_params_)
@@ -29,11 +38,13 @@ def evaluate_model(X_train, y_train, X_test, y_test, models, params):
 
             # make prediction
             y_pred = model.predict(X_test)
-            test_model_acuracy = accuracy_score(y_test, y_pred)
+            test_model_accuracy = accuracy_score(y_test, y_pred)
 
-            report[list(models.values())[i]] = test_model_acuracy
+            report[list(models.keys())[i]] = test_model_accuracy
 
-            return report
+            logging.info(f"Model {list(models.keys())[i]} Accuracy: {test_model_accuracy}")
+
+        return report 
 
     except Exception as e:
         raise CustomException(e, sys)
