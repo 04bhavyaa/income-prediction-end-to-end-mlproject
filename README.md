@@ -2,9 +2,10 @@
 
 The goal of this project is to predict whether an individual's income is greater than $50,000 or less than $50,000 based on various features. The dataset is derived from the UCI Adult Income dataset, which includes demographic and employment information of individuals. The task is to accurately classify individuals into one of two income categories: greater than $50K or less than or equal to $50K.
 
-Models Used: Logistic Regression Classifier, Decision Tree Classifier, Random Forest Classifier
-Model Selection: GridSearchCV for finding best parameters and eventually best model.
-Best Model: Random Forest Classifier with Accuracy Score = 0.8369186642081541
+- Models Used: Logistic Regression Classifier, Decision Tree Classifier, Random Forest Classifier
+- Model Selection: GridSearchCV for finding best parameters and eventually best model.
+- Best Model: Random Forest Classifier with Accuracy Score = 0.8369186642081541
+
 ### Folder Structure
 ```
 Directory structure:
