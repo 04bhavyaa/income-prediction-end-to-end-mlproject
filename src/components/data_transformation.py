@@ -26,8 +26,8 @@ class DataTransformation:
     def get_data_transformation_object(self):
         try:
             logging.info("Data Transformation object created")
-            numerical_features = ['age', 'workclass', 'education_num', 'marital_status', 'occupation', 'relationship', 
-                                  'race', 'sex', 'capital_gain', 'capital_loss', 'hours_per_week']
+            numerical_features = ['age', 'workclass', 'education', 'marital_status', 'occupation', 'relationship', 
+                                  'race', 'sex', 'capital_gain', 'capital_loss', 'hours_per_week', 'native_country']
             
             num_pipeline = Pipeline(
                 steps=[
@@ -67,8 +67,8 @@ class DataTransformation:
             logging.info("Data transformation initiated")
             train_data = pd.read_csv(train_path)
             test_data = pd.read_csv(test_path)
-            numerical_features = ['age', 'workclass', 'education_num', 'marital_status', 'occupation', 'relationship', 
-                                  'race', 'sex', 'capital_gain', 'capital_loss', 'hours_per_week']
+            numerical_features = ['age', 'workclass', 'education', 'marital_status', 'occupation', 'relationship', 
+                                  'race', 'sex', 'capital_gain', 'capital_loss', 'hours_per_week', 'native_country']
             
             for feature in numerical_features:
                 self.remove_outliers_IQR(col=feature, data=train_data)
