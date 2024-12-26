@@ -40,4 +40,6 @@ Directory structure:
         │   └── prediction_pipeline.py
         └── utils.py
 ```
+### Streamlit Application Interface
+![image](https://github.com/user-attachments/assets/09d2f940-100d-4102-a364-1a533afdf538)
 
