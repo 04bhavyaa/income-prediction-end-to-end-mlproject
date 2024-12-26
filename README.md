@@ -2,20 +2,40 @@
 
 The goal of this project is to predict whether an individual's income is greater than $50,000 or less than $50,000 based on various features. The dataset is derived from the UCI Adult Income dataset, which includes demographic and employment information of individuals. The task is to accurately classify individuals into one of two income categories: greater than $50K or less than or equal to $50K.
 
-### About the Dataset
+### Folder Structure
+Directory structure:
+└── 04bhavyaa-income-prediction-end-to-end-mlproject/
+    ├── artifacts/
+    │   ├── data_ingestion/
+    │   │   ├── test.csv
+    │   │   ├── raw.csv
+    │   │   └── train.csv
+    │   ├── model_trainer/
+    │   │   └── model.pkl
+    │   └── data_transformation/
+    │       └── preprocessor.pkl
+    ├── app.py
+    ├── requirements.txt
+    ├── setup.py
+    ├── README.md
+    ├── notebook/
+    │   ├── income-prediction.ipynb
+    │   └── data/
+    │       ├── adult-income.csv
+    │       └── adult.csv
+    └── src/
+        ├── logger.py
+        ├── exception.py
+        ├── components/
+        │   ├── data_transformation.py
+        │   ├── data_ingestion.py
+        │   ├── __pycache__/
+        │   └── model_trainer.py
+        ├── __init__.py
+        ├── __pycache__/
+        ├── pipeline/
+        │   ├── training_pipeline.py
+        │   ├── __pycache__/
+        │   └── prediction_pipeline.py
+        └── utils.py
 
-- **Age**: Age of the individual (Continuous).
-- **Workclass**: Type of employment (Private, Self-emp, Government, etc.).
-- **fnlwgt**: Weight assigned to the individual (Continuous).
-- **Education**: Highest level of education (e.g., Bachelors, Masters, Doctorate).
-- **Education-num**: Number of years of education (Continuous).
-- **Marital-status**: Marital status (e.g., Married, Divorced).
-- **Occupation**: Job type (e.g., Tech-support, Sales, Exec-managerial).
-- **Relationship**: Relationship status (e.g., Husband, Wife, Not-in-family).
-- **Race**: Ethnicity (e.g., White, Black, Asian).
-- **Sex**: Gender (Female, Male).
-- **Capital-gain**: Capital gain income (Continuous).
-- **Capital-loss**: Capital loss income (Continuous).
-- **Hours-per-week**: Weekly working hours (Continuous).
-- **Native-country**: Country of origin (e.g., United States, India).
-- **Salary**: Target variable indicating income level (>50K, <=50K).
