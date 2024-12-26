@@ -3,6 +3,7 @@
 The goal of this project is to predict whether an individual's income is greater than $50,000 or less than $50,000 based on various features. The dataset is derived from the UCI Adult Income dataset, which includes demographic and employment information of individuals. The task is to accurately classify individuals into one of two income categories: greater than $50K or less than or equal to $50K.
 
 ### Folder Structure
+```
 Directory structure:
 └── 04bhavyaa-income-prediction-end-to-end-mlproject/
     ├── artifacts/
@@ -38,4 +39,5 @@ Directory structure:
         │   ├── __pycache__/
         │   └── prediction_pipeline.py
         └── utils.py
+```
 
